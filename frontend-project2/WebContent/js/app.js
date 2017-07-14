@@ -19,7 +19,7 @@ app.config(function($routeProvider,$locationProvider){
 	.when('/getalljobs',{
 		templateUrl:'views/jobtitle.html',
 		controller:'JobController'
-	})
+	}) 
 	.when('/saveblogpost',{
 		templateUrl:'views/blogpostform.html',
 		controller:'BlogPostController'
@@ -36,6 +36,21 @@ app.config(function($routeProvider,$locationProvider){
 		templateUrl:'views/blogdetail.html',
 		controller:'BlogDetailController'
 	})
+	
+	.when('/suggestedusers',{
+		templateUrl:'views/suggesteduser.html',
+		controller:'FriendController'
+	})
+	.when('/pendingrequests',{
+		templateUrl:'views/pendingrequests.html',
+		controller:'FriendController'
+	})
+	
+	.when('/listoffriends',{
+		templateUrl:'views/listoffriends.html',
+		controller:'FriendController'
+})
+	
 	.otherwise({
 		templateUrl:'views/home.html'
 	})
@@ -61,62 +76,3 @@ app.run(function($rootScope,$location,UserService,$cookieStore){
 	}
 })
 
-/*
-	var app=angular.module("myApp",['ngRoute','ngCookies'])
-	
-	
-	//app.config(['$routeProvider','$locationProvider', function ($routeProvider, $locationProvider) 
-	
-	app.config(function($routeProvider) {
-		  $routeProvider		       
-			    console.log("regisater")
-			    .when('/registration',{ 
-			    	templateUrl:'views/registrationform.html',
-					controller:'UserController'
-			    })
-			    console.log("login")
-			    .when('/login',
-			   	{
-			    	templateUrl:'views/login.html',
-			    	controller:'UserController'
-			    })
-			    .when('/savejob',
-			    {
-			    	templateUrl:'views/jobform.html',
-			    	controller:'JobController'
-			    })
-			    .when('/getalljobs',
-			    {
-			    	templateUrl:'views/jobtitle.html',
-			    	controller:'JobController'
-			    })			
-			    .otherwise
-			    ({
-			        templateUrl:'views/home.html'
-			    })        
-			})
-			app.run(function($rootScope,$location,UserService,$cookieStore)
-			{
-				if($rootScope.currentUser==undefined)
-					$rootScope.currentUser=$cookieStore.get("currentUser")
-					
-					
-					
-			    $rootScope.logout=function()
-			    {
-			        UserService.logout().then(function(response)
-			        {
-			            $rootScope.message="loggedout succesfully.."
-			            delete $rootScope.currentUser;
-			            $cookieStore.remove("currentUser")
-			            $location.path('/login')
-			        },function(response)
-			          {
-			            console.log(response.status)
-			            $rootScope.message=response.data.message
-			            $location.path('/login')
-			                
-			          })
-			     }
-	         })
-*/
