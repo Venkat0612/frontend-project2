@@ -50,6 +50,10 @@ app.config(function($routeProvider,$locationProvider){
 		templateUrl:'views/listoffriends.html',
 		controller:'FriendController'
 })
+
+.when('/profilepic',{
+		templateUrl:'views/profilepic.html'
+	})
 	
 	.otherwise({
 		templateUrl:'views/home.html'
