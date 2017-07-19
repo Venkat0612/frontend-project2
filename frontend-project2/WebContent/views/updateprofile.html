@@ -1,0 +1,16 @@
+Update Details
+<form>
+Firstname:<input type="text" data-ng-model="userobj.firstname"><br>
+Lastname:<input type="text" data-ng-model="userobj.lastname"><br>
+Email<input  type="text" data-ng-model="userobj.email"><br>
+Username<input  type="text" data-ng-model="userobj.username" disabled="true"><br>
+Password<input  type="text" data-ng-model="userobj.password"><br>
+Select Role<input  type="radio" data-ng-model="userobj.role" value="Student">Student<br>
+<input type="radio" data-ng-model="userobj.role" value="Alumini">Alumini<br>
+<input type="radio" data-ng-model="userobj.role" value="Employee">Employee<br>
+<br>
+<input type="submit" data-ng-click="update()"><br>
+
+
+{{message}}
+</form>
