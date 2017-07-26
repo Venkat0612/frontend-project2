@@ -1,5 +1,6 @@
 <div>
-Search <input ng-model="jobTitle">
+Search By Title <input ng-model="searchText.title">
+Search By Author <input ng-model="searchText.title">
 <table class="table">
 <thead>
 <tr>
@@ -7,7 +8,7 @@ Search <input ng-model="jobTitle">
 </tr>
 </thead>
 <tbody>
-<tr ng-repeat="job in jobs | filter:jobTitle">
+<tr ng-repeat="job in jobs | filter:searchText">
 <td><a href="" ng-click="getJobDetail(job.id)"></a>{{job.jobTitle}}</td><td>{{job.postedOn | date:'yyyy:MM;dd'}}</td>
 </tr>
 </tbody>
