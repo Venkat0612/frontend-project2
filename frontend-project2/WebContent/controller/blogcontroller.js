@@ -1,7 +1,9 @@
 /**
  * 
  */
+
 app.controller('BlogPostController',function($scope,BlogPostService,$location){
+	$scope.message=''
 	$scope.saveBlogPost=function(){
 		BlogPostService.saveBlog($scope.blogPost).then(function(response){
 			$scope.success="Blog post inserted successfully and waiting for approval"
@@ -17,15 +19,15 @@ app.controller('BlogPostController',function($scope,BlogPostService,$location){
 		})
 	}
 	
-	  $scope.blogsApproved=BlogPostService.blogsApproved().then(function(response){
-		  $scope.blogsApproved=response.data;
-	  },function(response){
-		  console.log(response.status)
-	  })
-	  
-	  $scope.blogsWaitingForApproval=BlogPostService.blogsWaitingForApproval().then(function(response){
-		  $scope.blogsWaitingForApproval=response.data;
-	  },function(response){
-		  console.log(response.status)
-	  })
+  $scope.blogsApproved=BlogPostService.blogsApproved().then(function(response){
+	  $scope.blogsApproved=response.data;
+  },function(response){
+	  console.log(response.status)
+  })
+  
+  $scope.blogsWaitingForApproval=BlogPostService.blogsWaitingForApproval().then(function(response){
+	  $scope.blogsWaitingForApproval=response.data;
+  },function(response){
+	  console.log(response.status)
+  })
 })

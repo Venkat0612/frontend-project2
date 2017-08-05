@@ -12,10 +12,11 @@
 </div></div>
 </div>
 <form>
+<div class="container" align="center">
 <textarea rows="3" cols="20" ng-model="blogComment.body"></textarea><br>
 
-<button ng-click="addComment()" value="Post Comment">Post comment</button>
-
+<button ng-click="addComment()" value="Post Comment" class="btn btn-primary">Post comment</button>
+</div>
 </form>
 
 <div class="row" align="center">
@@ -32,3 +33,13 @@
 </div>
 </div>
 </div>
+<style>
+ body {
+        background-color: #444;
+        background: url(https://www.walldevil.com/wallpapers/a70/cityscape-night-dynamic-blue-wallpapers-chicago.jpg);
+        
+    }
+.vertical-offset-100{
+    padding-top:100px;
+}
+</style>

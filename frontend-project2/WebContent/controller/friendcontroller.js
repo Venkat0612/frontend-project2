@@ -29,8 +29,9 @@ app.controller('FriendController',function($scope,$location,FriendService)
 	}
 	
 	
-	function listOfFriends() {
-		$scope.listOfPendingRequests=FriendService.pendingRequests().then(function(response){
+	function listOfFriends()
+	{
+		$scope.friendsList=FriendService.listOfFriends().then(function(response){
 			console.log(response.data)
 			$scope.friendsList=response.data;
 		},function(response){

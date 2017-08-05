@@ -101,4 +101,6 @@ app.controller('ChatCtrl', ['$rootScope' ,'$scope', 'socket', function($rootScop
     };
  
  
-}]);
+}]);/**
+ * 
+ */

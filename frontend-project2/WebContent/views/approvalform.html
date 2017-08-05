@@ -1,22 +1,42 @@
-<body data-ng-controller='BlogDetailController' >
-<div class="row" align="center">
-<div>
-<div class="panel panel-default">
-<div class="panel-heading">
+<body data-ng-controller='BlogDetailController'>
+<div class="container" align="justify">
+		<div class="row vertical-offset-100">
+		    <div class="col-md-6 col-md-offset-14">
+		    	<div class="panel panel-default">
+					<div class="panel-heading">
+				    	<h3 class="panel-title" align="center">Approval form</h3>
+				 	</div><br>
+
+<center>
 <div>{{blogPost.title}}</div>
-<span><strong>Created By:</strong>{{blogPost.createdBy.username}}</span>
-<span><strong>Created on:</strong>{{blogPost.createdOn | date:'medium'}}</span>
-</div>
+<span><strong>Created By:</strong>{{blogPost.createdBy.username}}</span><br>
+<span><strong>Created On:</strong>{{blogPost.createdOn | date:'medium'}}</span>
 <div class="panel-body">
 {{blogPost.body}}
 </div>
+</center>
 
 
-<form>
-<input type="radio" data-ng-model="blogPost.approved" value="true">Approve<br>
-<input type="radio" data-ng-model="blogPost.approved" value="false">Reject<br>
-<button  data-ng-click="updateApproval()" value="update Status">Update</button>
 
-</form>
-</div></div>
+<div class="form-group" align="center">
+<input type="radio" ng-model="blogPost.approved" value="true">&nbsp <b>Approve</b><br><br>
+<input type="radio" ng-model="blogPost.approved" value="false">&nbsp <b>Reject</b><br><br>
+</div><br>
+<center>
+<button ng-click="updateApproval()" value="update Status">Update</button>
+</center><br>
+</div></div></div>
+</div>
 </body>
+
+
+<style>
+ body {
+        background-color: #444;
+        background: url("https://www.walldevil.com/wallpapers/a70/cityscape-night-dynamic-blue-wallpapers-chicago.jpg");
+        
+    }
+.vertical-offset-100{
+    padding-top:10px;
+}
+</style>

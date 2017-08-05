@@ -1,15 +1,57 @@
-
-<span>{{message}}</span>
-<form>
-
-Enter Job Title:<input type="text" ng-model="job.jobTitle"><br>
-Enter Job Description:<textarea ng-model="job.jobDescription"></textarea><br>
-Enter Year Of Experience:<input type="text" ng-model="job.yrsOfExp"><br>
-Enter Salary:<input type="text" ng-model="job.salary"><br>
-Enter Skills Required:<input type="text" ng-model="job.skillsRequired"><br>
-Enter Location:<input type="text" ng-model="job.location"><br>
-Enter Company Name:<input type="text" ng-model="job.companyName"><br>
-
-<input type="submit" value="saveJob" ng-click="saveJob()">
-
-</form>
+<style>
+ body 
+ 	{
+        background-color: #444;
+        background: url(https://www.walldevil.com/wallpapers/a70/cityscape-night-dynamic-blue-wallpapers-chicago.jpg);
+    }
+.vertical-offset-100{
+    padding-top:40px;
+}
+</style>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body data-ng-controller='UserController'>
+<div class="container" align="justify">
+		<div class="row vertical-offset-100">
+		    <div class="col-md-6 col-md-offset-3">
+		    	<div class="panel panel-default">
+					<div class="panel-heading">
+				    	<h3 class="panel-title" align="center"><i>Job Form</i></h3>
+				 	</div>
+					<!-- <div>
+						{{message}}
+					</div> -->
+					<fieldset><br>
+						<div class="form-group" align="center">
+							<label class="col-md-4 control-label"><i>Enter Job Title:</i></label><input type="text" ng-model="job.jobTitle"><br>
+						</div>
+						<div class="form-group" align="center">
+							<label class="col-md-4 control-label"><i>Enter Job Description:</i></label><textarea ng-model="job.jobDescription"></textarea><br>
+						</div>
+						<div class="form-group" align="center">
+							<label class="col-md-4 control-label"><i>Enter Year Of Experience:</i></label><input type="text" ng-model="job.yrsOfExp"><br>
+						</div><br>
+						<div class="form-group" align="center">
+							<label class="col-md-4 control-label"><i>Enter Salary:</i></label><input type="text" ng-model="job.salary"><br>
+						</div>
+						<div class="form-group" align="center">
+							<label class="col-md-4 control-label"><i>Enter Skills Required:</i></label><input type="text" ng-model="job.skillsRequired"><br>
+						</div>
+						<div class="form-group" align="center">
+							<label class="col-md-4 control-label"><i>Enter Location:</i></label><input type="text" ng-model="job.location"><br>
+						</div>
+						<div class="form-group" align="center">
+							<label class="col-md-4 control-label"><i>Enter Company Name:</i></label><input type="text" ng-model="job.companyName"><br>
+						</div>
+						
+						<div align="center"><input type="submit" value="saveJob" ng-click="saveJob()"></div>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

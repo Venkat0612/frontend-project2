@@ -1,16 +1,55 @@
-Update Details
-<form>
-Firstname:<input type="text" data-ng-model="userobj.firstname"><br>
-Lastname:<input type="text" data-ng-model="userobj.lastname"><br>
-Email<input  type="text" data-ng-model="userobj.email"><br>
-Username<input  type="text" data-ng-model="userobj.username" disabled="true"><br>
-Password<input  type="text" data-ng-model="userobj.password"><br>
-Select Role<input  type="radio" data-ng-model="userobj.role" value="Student">Student<br>
-<input type="radio" data-ng-model="userobj.role" value="Alumini">Alumini<br>
-<input type="radio" data-ng-model="userobj.role" value="Employee">Employee<br>
-<br>
-<input type="submit" data-ng-click="update()"><br>
+<style>
+ body 
+ 	{
+        background-color: #444;
+        background: url(https://www.walldevil.com/wallpapers/a70/cityscape-night-dynamic-blue-wallpapers-chicago.jpg);
+    }
+.vertical-offset-100{
+    padding-top:10px;
+}
+</style>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body data-ng-controller='UserController'>
+<div class="container" align="justify">
+		<div class="row vertical-offset-100">
+		    <div class="col-md-6 col-md-offset-14">
+		    	<div class="panel panel-default">
+					<div class="panel-heading">
+				    	<h3 class="panel-title" align="center"><i>Update Details</i></h3>
+				 	</div>
+<formset>
+	<div class="form-group" align="center">
+		<label class="col-md-4 control-label"><i>Firstname:</i></label><input type="text" data-ng-model="userobj.firstname"><br>
+	</div>
+	<div class="form-group" align="center">
+		<label class="col-md-4 control-label"><i>Lastname:</i></label><input type="text" data-ng-model="userobj.lastname"><br>
+	</div>
+	<div class="form-group" align="center">
+		<label class="col-md-4 control-label"><i>Email</i></label><input  type="text" data-ng-model="userobj.email"><br>
+	</div>
+	<div class="form-group" align="center">
+		<label class="col-md-4 control-label"><i>Username</i></label><input  type="text" data-ng-model="userobj.username" disabled="true"><br>
+	</div>
+	<div class="form-group" align="center">
+		<label class="col-md-4 control-label"><i>Password</i></label><input  type="text" data-ng-model="userobj.password"><br>
+	</div>
+	<div class="form-group" align="center">
+		<label class="col-md-4 control-label"><i>Select Role</i></label><input type="radio" ng-model="user.role" value="Student">Student
+		<input type="radio" ng-model="user.role" value="Alumini">Alumini
+		<input type="radio" ng-model="user.role" value="Employee">Employee
+	</div><br>
+	<div class="form-group" align="center"><input type="submit" data-ng-click="update()"><br></div>
 
 
 {{message}}
-</form>
+</formset>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

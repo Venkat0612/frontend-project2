@@ -1,11 +1,42 @@
-<div class="container">
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body data-ng-controller='UserController'>
+<div class="container" align="justify">
+		<div class="row vertical-offset-100">
+		    <div class="col-md-8 col-md-offset-14">
+		    	<div class="panel panel-default">
+					<div class="panel-heading">
+				    	<h3 class="panel-title" align="center">Pending Request<i></i></h3>
+				 	</div>
+
+
 <table class="table">
 
 <tr ng-repeat="pr in listOfPendingRequests">
-<td>{{pr.fromId}}</td> <td><a href="" ng-click="updatePendingRequest(pr.fromId,'A')" class="btn btn-default">Accept</a></td>
+<td>{{pr.fromId}}</td><td><img src="http://localhost:8686/backend-project2/getimage/{{pr.fromId}}" height="50" width="50"></td><td><a href="" ng-click="updatePendingRequest(pr.fromId,'A')" class="btn btn-default">Accept</a></td>
 
 <td><a href="" ng-click="updatePendingRequest(pr.fromId,'D')" class="btn btn-default">Reject</a></td>
 </tr>
 
 </table>
 </div>
+</div>
+</div>
+</div>
+
+</body>
+
+<style>
+ body {
+        background-color: #444;
+        background: url(https://www.walldevil.com/wallpapers/a70/cityscape-night-dynamic-blue-wallpapers-chicago.jpg);
+        
+    }
+.vertical-offset-100{
+    padding-top:10px;
+}
+</style>
+</html>

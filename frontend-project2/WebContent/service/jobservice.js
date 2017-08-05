@@ -11,5 +11,10 @@ app.factory('JobService',function($http){
 		return $http.get("http://localhost:8686/backend-project2/getalljobs")
 	}
 	
+	jobService.getJobById=function(id){
+        console.log(id)
+        return $http.get("http://localhost:8686/backend-project2/getjobbyid/"+id)
+    }
+	
 	return jobService;
 })

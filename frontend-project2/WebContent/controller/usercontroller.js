@@ -14,10 +14,9 @@ app.controller('UserController',function(UserService,$scope,$location,$rootScope
                 
                 $location.path('/login')
         }, function(response)
-        
         {
             $scope.error=response.data;
-            $location.path('/register')
+            $location.path('/registration')
         })
     
     }
@@ -32,9 +31,7 @@ app.controller('UserController',function(UserService,$scope,$location,$rootScope
             $scope.error=response.data
             $location.path('/login')
         })
-        
     }
-    
     $scope.userobj=UserService.getUserByUsername().then(function(response)
     		{
     	$scope.userobj=response.data

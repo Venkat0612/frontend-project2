@@ -5,7 +5,7 @@ app.factory('UserService',function($http)
     userService.registerUser=function(user)
     {
     	console.log("registration start")
-        return $http.put("http://localhost:8686/backend-project2/register",user)
+        return $http.post("http://localhost:8686/backend-project2/registration",user)
         console.log("Registration done")
     }
     

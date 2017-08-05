@@ -1,12 +1,10 @@
-
-
-var app = angular.module('myApp',['ngRoute','ngCookies']);
+ var app = angular.module('myApp',['ngRoute','ngCookies']);
 
 
 app.config(function($routeProvider,$locationProvider){
 	
 	$routeProvider
-	.when('/register',{
+	.when('/registration',{
 		templateUrl:'views/registrationform.html',
 		controller:'UserController'
 	})
@@ -21,7 +19,7 @@ app.config(function($routeProvider,$locationProvider){
 	.when('/getalljobs',{
 		templateUrl:'views/jobtitle.html',
 		controller:'JobController'
-	}) 
+	})
 	.when('/saveblogpost',{
 		templateUrl:'views/blogpostform.html',
 		controller:'BlogPostController'
@@ -38,7 +36,6 @@ app.config(function($routeProvider,$locationProvider){
 		templateUrl:'views/blogdetail.html',
 		controller:'BlogDetailController'
 	})
-	
 	.when('/suggestedusers',{
 		templateUrl:'views/suggesteduser.html',
 		controller:'FriendController'
@@ -47,12 +44,10 @@ app.config(function($routeProvider,$locationProvider){
 		templateUrl:'views/pendingrequests.html',
 		controller:'FriendController'
 	})
-	
 	.when('/listoffriends',{
 		templateUrl:'views/listoffriends.html',
 		controller:'FriendController'
-})
-	
+	})
 	.when('/profilepic',{
 		templateUrl:'views/profilepic.html'
 	})
@@ -60,13 +55,11 @@ app.config(function($routeProvider,$locationProvider){
 		templateUrl:'views/updateprofile.html',
 		controller:'UserController'
 	})
-	
 	.when('/chat',{
 		templateUrl:'views/chat.html',
 		controller:'ChatCtrl'
 	})
 
-	
 	.otherwise({
 		templateUrl:'views/home.html'
 	})
@@ -91,4 +84,3 @@ app.run(function($rootScope,$location,UserService,$cookieStore){
 				})
 	}
 })
-

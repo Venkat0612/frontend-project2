@@ -1,6 +1,7 @@
 <div>
-Search By Title <input ng-model="searchText.title">
-Search By Author <input ng-model="searchText.title">
+Search By Title<input ng-model="searchText.jobTitle">
+Search By Author<input ng-model="searchText.author">
+<!-- Search <input ng-model="jobTitle"> -->
 <table class="table">
 <thead>
 <tr>
@@ -9,10 +10,11 @@ Search By Author <input ng-model="searchText.title">
 </thead>
 <tbody>
 <tr ng-repeat="job in jobs | filter:searchText">
-<td><a href="" ng-click="getJobDetail(job.id)"></a>{{job.jobTitle}}</td><td>{{job.postedOn | date:'yyyy:MM;dd'}}</td>
+<td><a href="" ng-click="getJobDetail(job.id)">{{job.jobTitle}}</a></td><td>{{job.postedOn | date:'yyyy:MM;dd'}}</td>
 </tr>
 </tbody>
 </table>
+</div>
 <div ng-show="showdetails">
 <b>Job Details</b>
 <b>Job title : </b>{{job.jobTitle}}<br>
@@ -23,4 +25,15 @@ Search By Author <input ng-model="searchText.title">
 <b>Salary :</b> {{job.salary}}<br>
 <b>company Name :</b> {{job.companyName}}<br>
 </div>
-</div>
+<style>
+ body {
+        background-color: #444;
+        background: url(http://wallsdesk.com/wp-content/uploads/2016/11/Eiffel-Tower-HD-Desktop.jpg);
+        
+        
+    }
+
+.vertical-offset-100{
+    padding-top:100px;
+}
+</style>

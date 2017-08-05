@@ -5,6 +5,57 @@
 <title>Insert title here</title>
 </head>
 <body>
+<div class="container-fluid" ng-hide="currentUser.username">
+<h1><center><b>COLLABORATION PROJECT</b></center></h1>
+<p style="font-size:20px">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Collaborative project management is a method used to plan, coordinate, control, and monitor distributed and complex projects. 
+It enables project teams to collaborate across departmental, corporate, and national boundaries and to master growing project complexity.</p>
+
+<p style="font-size:20px">&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Project Collaboration is the basis of bringing two or more people of an organization or team to come together and work by sharing knowledge, experience and skills for the development of a new project. 
+A project collaboration software should offer a set of tools that enable team members to get projects done, quickly find information they need and above all communicate and work together to achieve common business goals. 
+The core elements of a project collaboration software are register, login, jobs, blogs, blog comments, friend and real-time collaboration (Chat, Blogs).</p><br>
+</div>
+
+<div ng-show="currentUser.role == 'Admin'">
+   <h1><center>Blogs Approval</center></h1></div><br>
+   <div ng-show="currentUser.role == 'Admin'">
+   <div class="panel panel-info">
+     <div class="panel-heading">
+        <li><a href="#getallblogs" ng-show="currentUser.role == 'Admin'"><span class="blogtext"><b style="font-size:20px">List of blogPosts waiting for approval</b></span></a></li>
+  </div>
+   </div>
+   </div>
+<br>
+   
+   <div ng-show="currentUser.username">
+   <h1><center>List of Jobs</center></h1></div><br>  
+   <div ng-show="currentUser.username">
+   <div class="panel panel-info">
+     <div class="panel-heading">	
+     	<li><a href="#getalljobs" ng-show="currentUser.firstname"><span class="jobtext"><b style="font-size:20px">List of jobs to apply</b></span></a></li>
+   </div>
+   </div>
+   </div>
+
+	 <div ng-show="currentUser.username">
+   <h1><center>Suggested Users</center></h1></div><br>  
+   <div ng-show="currentUser.username">
+   <div class="panel panel-info">
+     <div class="panel-heading">	
+     	<li><a href="#suggestedusers" ng-show="currentUser.firstname"><span class="userstext"><b style="font-size:20px">List of suggested users</b></span></a></li>
+   </div>
+   </div>
+   </div>
+
 
 </body>
+<style>
+ body {
+        background-color: #444;
+        background: url("http://wallsdesk.com/wp-content/uploads/2016/11/Eiffel-Tower-HD-Desktop.jpg");
+       
+    }
+.vertical-offset-100{
+    padding-top:10px;
+}
+</style>
 </html>
